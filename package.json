@@ -1,0 +1,23 @@
+{
+  "name": "TorooChat",
+  "version": "0.0.0",
+  "description": "Nodejs, AngularJs, Mongoose, Bootstrap chat demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tortuvshin/node_mon"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Tortuvshin Byambaa",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/tortuvshin/node_mon/issues"
+  },
+  "homepage": "https://github.com/tortuvshin/node_mon"
+}
