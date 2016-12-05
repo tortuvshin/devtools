@@ -18,22 +18,22 @@ class Survey extends Model
    */
   public function questionOneContent()
   {
-    return "How happy are you feeling today?";
+    return "ЦАХИМ ХУУДАС ХИЙЛГЭЖ БАЙСАН ЭСЭХ?";
   }
 
   public function questionTwoContent()
   {
-    return "How well did you sleep last night?";
+    return "БАЙГУУЛЛАГЫН ДИЗАЙН БРЭНДБҮҮК БАЙГАА ЭСЭХ?";
   }
 
   public function questionThreeContent()
   {
-    return "How likely are you to see a friend today?";
+    return "АГУУЛГА БАЙГАА ЭСЭХ?";
   }
 
   public function questionFourContent()
   {
-    return "How pleased are your with your diet today?";
+    return "ДОМАЙН АВСАН ЭСЭХ?";
   }
 
   /**

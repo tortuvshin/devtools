@@ -38,7 +38,7 @@
                   <SurveyGraph
                    survey={this.state.allSurveyData}
                   />
-                  <p>The more daily surveys you take, the more insightful these averages will become.</p>
+                  <p>.</p>
                 </div>
               </div>
             </div>

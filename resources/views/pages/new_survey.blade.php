@@ -6,8 +6,7 @@
 
 
   <script type="text/babel">
-    // Parent New Survey component responsible for fetching object from endpoint
-    // as well as posting completed form
+  
     var NewSurvey = React.createClass({
       getInitialState: function() {
         return {
@@ -59,7 +58,7 @@
           />
         }.bind(this));
         if(this.state.question_1_response && this.state.question_2_response && this.state.question_3_response && this.state.question_4_response){
-          submitButton = <button className='btn btn-primary btn-lg btn-block' onClick={this.handleSurveySubmit}> Submit </button>;
+          submitButton = <button className='btn btn-primary btn-lg btn-block' onClick={this.handleSurveySubmit}> {{trans('globals.submit')}} </button>;
         }
 
         return (
