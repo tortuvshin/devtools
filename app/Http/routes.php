@@ -20,6 +20,7 @@ Route::auth();
 Route::get('/daily-surveys', 'PagesController@index');
 Route::get('/daily-surveys/new', 'PagesController@newSurvey');
 Route::get('/daily-surveys/{id}','PagesController@show');
+Route::get('/dictionary','PagesController@dictionary');
 
 Route::post('/surveys', 'SurveysController@create');
 Route::get('/surveys', 'SurveysController@index');

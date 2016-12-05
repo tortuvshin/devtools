@@ -35,7 +35,7 @@
               <li><a href="{{ url('/login') }}">{{trans('user.login')}}</a></li>
               <li><a href="{{ url('/register') }}">{{trans('user.register')}}</a></li>
             @else
-              <li><a href="#">Сйан  {{ Auth::user()->name }}</a></li>
+              <li><a href="#">Сайн уу  {{ Auth::user()->name }}</a></li>
               <li><a href="{{ url('/logout') }}">{{trans('user.logout')}}</a></li>
             @endif
           </ul>

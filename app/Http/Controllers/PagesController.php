@@ -24,6 +24,11 @@ class PagesController extends Controller
     return view('pages.new_survey');
   }
 
+  public function dictionary()
+  {
+    return view('pages.dic');
+  }
+
   public function show($id)
   {
     $survey = Survey::find($id);
