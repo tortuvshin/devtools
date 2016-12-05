@@ -31,7 +31,7 @@
               <div className="panel panel-default">
                 <div className="panel-heading">
                   <div className="panel-title">
-                    Your Averages
+                    {{trans('globals.your_average')}}
                   </div>
                 </div>
                 <div className="panel-body text-center">
