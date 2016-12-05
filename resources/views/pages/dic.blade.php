@@ -14,8 +14,8 @@
          return(
           <div>
             <div className="row">
-              <div className="col-md-4" />
-              <div className="col-md-4 text-center">
+              <div className="col-md-8" />
+              <div className="col-md-8 text-center">
                 <div className="panel panel-default">
                   <div className="panel-heading">
                     <div className="panel-title">
@@ -27,9 +27,11 @@
                   </div>
                 </div>
               </div>
-              <div className="col-md-4" />
+              <div className="col-md-8" />
             </div>
+            <div className="black">aaaa</div>
           </div>
+
         );
       }
     });
