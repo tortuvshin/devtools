@@ -15,52 +15,40 @@
 
   </head>
   <body>
-    <div id="header-container" class="navbar navbar-default">
-      
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/daily-surveys">{{trans('globals.site_title')}}</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/daily-surveys">{{trans('globals.home_page')}}</a></li>
+            <li><a href="/daily-surveys/new">{{trans('globals.new_survey')}}</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            @if (Auth::guest())
+              <li><a href="{{ url('/login') }}">{{trans('user.login')}}</a></li>
+              <li><a href="{{ url('/register') }}">{{trans('user.register')}}</a></li>
+            @else
+              <li><a href="#">Сайн уу  {{ Auth::user()->name }}</a></li>
+              {{ Form::open(array('url' => '/logout')) }}
+               {{ Form::submit(trans('user.logout')) }}
+              {{ Form::close() }}
+            @endif
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="row row-centered">
         @yield('content')
       </div>
     </div>
+
   </body>
-  <script type="text/babel">
-  
-    var Header = React.createClass({
-      render: function() {
-         return(
-          <div className="container-fluid">
-        
-            <div className="navbar-header">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
-              <a className="navbar-brand" href="/daily-surveys">{{trans('globals.site_title')}}</a>
-            </div>
-            <div className="collapse navbar-collapse" id="navbar-collapse">
-              <ul className="nav navbar-nav">
-                <li><a href="/daily-surveys">{{trans('globals.home_page')}}</a></li>
-                <li><a href="/daily-surveys/new">{{trans('globals.new_survey')}}</a></li>
-              </ul>
-              <ul className="nav navbar-nav navbar-right">
-                @if (Auth::guest())
-                  <li><a href="{{ url('/login') }}">{{trans('user.login')}}</a></li>
-                  <li><a href="{{ url('/register') }}">{{trans('user.register')}}</a></li>
-                @else
-                  <li><a href="#">Сайн уу  {{ Auth::user()->name }}</a></li>
-                  <li><a href="{{ url('/logout') }}">{{trans('user.logout')}}</a></li>
-                @endif
-              </ul>
-            </div>
-          </div>
-        );
-      }
-    });
-    ReactDOM.render(
-      <Header />,
-      document.getElementById('header-container')
-    );
-  </script>
 </html>
